@@ -19,16 +19,16 @@ void failwhale(char *err_msg)
 
 int unit_test(int argc, char **argv)
 {
-	TrieNode *root;
+  TrieNode *root;
   
   // make a trie with this corpus
-	root = buildTrie("corpus07.txt");
+  root = buildTrie("corpus07.txt");
   if (processInputFile(root, "thisFileDoesNotExist") != 1)
     failwhale("processInputFile doesn't return 1 when input file doesn't exist");
 
   destroyTrie(root);
 
-	printf("Success!\n");
+  printf("Success!\n");
 
-	return 0;
+  return 0;
 }
